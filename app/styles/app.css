@@ -1,0 +1,81 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* CSS Variables */
+html {
+  --colors-gray-1200: hsl(0, 0%, 8.5%);
+  --colors-gray-1100: hsl(0, 0%, 11%);
+  --colors-gray-1000: hsl(0, 0%, 13.6%);
+  --colors-gray-900: hsl(0, 0%, 15.8%);
+  --colors-gray-800: hsl(0, 0%, 17.9%);
+  --colors-gray-700: hsl(0, 0%, 20.5%);
+  --colors-gray-600: hsl(0, 0%, 24.3%);
+  --colors-gray-500: hsl(0, 0%, 31.2%);
+  --colors-gray-400: hsl(0, 0%, 43.9%);
+  --colors-gray-300: hsl(0, 0%, 49.4%);
+  --colors-gray-200: hsl(0, 0%, 62.8%);
+  --colors-gray-100: hsl(0, 0%, 93%);
+}
+
+.radial-gradient {
+  --dot: 0.75px;
+  --space: 30px;
+  --spread: calc(var(--space) / 2);
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-image: radial-gradient(
+      var(--colors-gray-1000) var(--dot),
+      transparent var(--dot)
+    ),
+    radial-gradient(
+      var(--colors-gray-1000) var(--dot),
+      var(--colors-gray-1200) var(--dot)
+    );
+  background-size: var(--space) var(--space);
+  background-position: 0px 0px, var(--spread) var(--spread);
+}
